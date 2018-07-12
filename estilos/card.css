@@ -1,0 +1,25 @@
+.card {
+    width: 320px;
+    height: 230px;
+    border-radius: 5%;
+    background-color: aliceblue;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card img {
+    border-radius: 5% 5% 0 0;
+    filter: grayscale(.7);
+}
+
+.card img:hover {
+    filter: grayscale(0);
+}
+
+.card h4 {
+    text-align: center;
+}

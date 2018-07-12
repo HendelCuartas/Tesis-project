@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.panelbar {
+    margin: 0;
+    padding: 0;
+    width: 3em;
+    height: 100%;
+    position: fixed;
+    background-color: #943B50;
+    font-size: 18px;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.panelbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 3em;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    background-color: #943B50;
+    font-family: arial;
+    font-size: 18px;
+    z-index: 3;
+    overflow: hidden;
+    top: 50%;
+    transform: translateY(-25%);
+}
+
+.panelbar ul li a {
+    display: block;
+    color: white;
+    padding: 1em 1em;
+    text-decoration: none;
+    text-align: left;
+}
+
+.panelbar ul li a:hover {
+    background-color: rgb(160, 68, 90);
+    color: white;
+}
+
+.panelbar ul li:after {
+    content: attr(title);
+    position: absolute;
+    left: 5em;
+    top: 0;
+    height: 3em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgb(133, 49, 68);
+    padding: 2em;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.panelbar ul li:hover:after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.active {
+    background-color: lightblue;
+    color: white;
+}
+
+.logo-hdv {
+    padding-top: 60px;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+.descripcion {
+    color: white;
+    font-size: 1.5em;
+}
+
+.piedepag {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    text-align: center;
+    max-height: 10%;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.logo-aso,
+.logo-uao,
+.logo-icesi {
+    padding-left: 20px;
+}
+
+.logo-aso {
+    position: relative;
+}
+
+.logo-icesi {
+    position: relative;
+    bottom: 0.5em;
+}
+
+@media (max-width: 600px) {
+    .piedepag>p {
+        visibility: hidden;
+    }
+    .piedepag {
+        position: fixed;
+        bottom: 0;
+    }
+    .logo-aso,
+    .logo-uao,
+    .logo-icesi {
+        padding-left: 5px;
+        max-width: 50px;
+    }
+    .logo-icesi {
+        position: relative;
+        bottom: 15px;
+    }
+    .logo-uao {
+        position: relative;
+        bottom: 0px;
+    }
+}
+
+.piedepag>p {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 2%;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 800;
+}
+
+.btn_in_go_doc {
+    background-color: #943B50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+}
+
+.btn_in_go_doc:hover {
+    background-color: #D97565;
+}
+
+.descripcion {
+    font-weight: 800;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.contenido {
+    margin: auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* TERMINA ESTILOS INDEX Y GENERALES*/
+
+/* INICIA ESTILOS SECCIÓN DOCUMENTAL*/
+
+.cont_sec_doc {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #d97565;
+    background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.videowrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0px;
+}
+
+.videowrapper iframe {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.popcontainer {
+    width: 100%;
+    height: 100%;
+    color: #943B50;
+    opacity: 0.2;
+}
+
+.instrucc {
+    width: 100%;
+    z-index: 100;
+}
+
+.instrucc img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+.x {
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #CCC;
+    border-radius: 2px;
+    border: solid 2px #FFF;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    top: 2.5%;
+    right: 9%;
+}
+
+.xinst {
+    right: 5em;
+}
+
+.x:hover {
+    background: #BB3333;
+    transform: rotate(180deg);
+}
+
+.x b {
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border: solid 6px rgba(255, 255, 255, 0);
+}
+
+.x b:nth-child(1) {
+    border-top-color: #FFF;
+    top: -2px;
+}
+
+.x b:nth-child(2) {
+    border-left-color: #FFF;
+    left: -2px;
+}
+
+.x b:nth-child(3) {
+    border-bottom-color: #FFF;
+    bottom: -2px;
+}
+
+.x b:nth-child(4) {
+    border-right-color: #FFF;
+    right: -2px;
+}
+
+.map-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.button-maps {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -10px;
+}
+
+.btn-maps {
+    width: 200px;
+    height: 50px;
+    margin: 1rem;
+    border-radius: 4px;
+    outline: 0;
+    box-shadow: 0 1px 1px;
+    background-color: #943B50;
+    border-width: 0;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.interactive-map-style {
+    width: 100%;
+    height: 100vh;
+    align-self: flex-end;
+}
+
+.map-style {
+    height: 600px;
+    width: 1240px;
+}
+
+.mapboxgl-ctrl {
+    display: none !important;
+}
+
+.hidde-element {
+    display: none;
+}
+
+.marker {
+    background-image: url('https://i.imgur.com/MK4NUzI.png');
+    width: 45px;
+    height: 63px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wait-screen {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: rgb(133, 49, 68);
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 28px;
+        left: 28px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: -1px;
+        left: -1px;
+        width: 58px;
+        height: 58px;
+        opacity: 0;
+    }
+}
+
+.etiqueta {
+    color: white;
+    font-size: 0.7em;
+    text-align: center;
+}
