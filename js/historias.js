@@ -29,6 +29,7 @@ function createThumbnail(video, id) {
 
 function selectVideo(id) {
     openVideo(videos[id].id.videoId);
+    console.log(videos[id].id.videoId);
 }
 
 function filterVideo(filterData) {

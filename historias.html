@@ -19,14 +19,14 @@
 </head>
 <!--BODY-->
 
-<body onload="onLoadPage(),onLoadPageToolt(), introJs().start(), hoverBar()">
-    <div class="cont_sec_doc cont-his" data-step="1" data-intro="Descubre historias que reflejan el conocimiento y cultura de la Partería tradicional afro">
+<body onload="onLoadPage(),onLoadPageToolt(), introJs().start(), hoverBar(), etiquetaSeguimiento()">
+    <div class="cont_sec_doc cont-his" data-step="1" data-intro="Descubre y aprende de historias que reflejan el conocimiento y cultura de la Partería tradicional afro">
 
         <div class="searchsection">
             <form action="#" class="search-form">
                 <div class="wrap">
                     <div class="search">
-                        <input type="text" class="searchTerm" placeholder="Buscar..." data-step="2" data-intro="Busca según lo que quieres conocer">
+                        <input type="text" class="searchTerm" placeholder="Buscar..." data-step="2" data-intro="Busca según lo que quieres conocer o profundizar">
                         <button class="searchButton btn-press" onclick="busqueda()">
                             <i class="fa fa-search"></i>
                         </button>
@@ -37,7 +37,7 @@
 
             <a href="#" class="btnrecom btn-press" onclick="recomendation()" data-step="3" data-intro="Mira los últimos videos agregados">Ver recomendaciones</a>
             <div class="dropdown">
-                <button class="dropbtn btn-press" data-step="4" data-intro="Filtra los videos según la categoría que desees">Categorías</button>
+                <button class="dropbtn btn-press" data-step="4" data-intro="Filtra los videos según la categoría que de tu interés">Categorías</button>
                 <div id="drop-content" class="dropdown-content">
                     <a href="#" class="filter" name="cultura">Cultura</a>
                     <a href="#" class="filter" name="practicas">Prácticas</a>
@@ -98,6 +98,8 @@
 </body>
 
 <!--TERMINA FOOTER-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122372284-1"></script>
+<script src="./js/analytics.js"></script>
 <script src="./js/hover-bar.js"></script>
 <script>
     function myFunction(x) {

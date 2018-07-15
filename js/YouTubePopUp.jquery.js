@@ -11,7 +11,7 @@ function openVideo(videoID) {
             $(this).remove();
         });
     });
-    e.preventDefault();
+
     $(document).keyup(function (e) {
         if (e.keyCode == 27) {
             $('.YouTubePopUp-Wrap, .YouTubePopUp-Close').click();
