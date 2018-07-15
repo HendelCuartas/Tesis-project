@@ -342,8 +342,9 @@ body {
 
 .marker {
     background-image: url('https://i.imgur.com/MK4NUzI.png');
-    width: 45px;
-    height: 63px;
+    width: 20px;
+    height: 33px;
+    background-size: 20px;
     background-repeat: no-repeat;
     cursor: pointer;
 }
