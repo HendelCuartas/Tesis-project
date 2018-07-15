@@ -2204,7 +2204,7 @@
     closeButton.setAttribute('role', 'button');
     closeButton.innerHTML = this._options.hintButtonLabel;
     closeButton.onclick = _hideHint.bind(this, stepId);
-
+    botonCerrar = closeButton;
     tooltipTextLayer.appendChild(tooltipWrapper);
     tooltipTextLayer.appendChild(closeButton);
 

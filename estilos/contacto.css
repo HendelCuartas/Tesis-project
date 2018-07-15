@@ -41,3 +41,34 @@ h3{
 #fotocontacto{
     width: 70%;
 }
+
+@media (max-width: 624px) {
+    #fotocontacto{
+        display: none;
+    }
+    h1{
+        font-size: 1.5em;
+        padding-top: 0.5em;
+        color: rgb(133, 49, 68);
+    }
+    h3{
+        padding-bottom: 2em;
+        font-size: 1em;
+    }
+    iframe {
+        position: fixed;
+        width: 100%;
+        height: 50%;
+        top: 50%;
+        left: 3em;
+    }
+    
+    .infocontacto {
+        position: fixed;
+        padding-left: 3em;
+        width: 100%;
+        height: 50%;
+        left: 0;
+        top: 0;
+    }
+}

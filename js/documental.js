@@ -1,19 +1,26 @@
+var acercamiento = 10;
 
 function closeWaitScreen() {
   $('.wait-screen').css('display', 'none');
 }
 
+function playSound(soundfile) {
+  document.getElementById("dummy").innerHTML= `<embed src=\""
+    +soundfile+"\" hidden=\"true\" autostart=\"true\"
+    loop=\"false\" />`;
+}
+
 function onLoadPage() {
   closeWaitScreen();
 }
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGVuZGVsY3VhcnRhcyIsImEiOiJjamlveDZ3YTUwdW91M3BxaGN3NHNqMWFyIn0.EnbWjk5wHR478Pgi95UjOQ';
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v10',
-  zoom: 8,
-  center: [-76.989, 3.875],
+  zoom: 20,
+  center: [-77.00544781668299, 3.8711397708862423],
 });
-
 
 const geojson = {
   type: 'FeatureCollection',
@@ -21,7 +28,7 @@ const geojson = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-77.002, 3.875]
+        coordinates: [-77.00534405725284, 3.8710632529502957]
       },
       properties: {
         title: 'video-uno',
@@ -32,7 +39,7 @@ const geojson = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-77.198, 3.853]
+        coordinates: [-77.00537715811697, 3.8711164516110927]
       },
       properties: {
         title: 'video-dos',
@@ -43,7 +50,7 @@ const geojson = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-77.095, 3.686]
+        coordinates: [-77.00537508331252, 3.8712022018439494]
       },
       properties: {
         title: 'video-tres',
@@ -54,7 +61,7 @@ const geojson = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-77.355, 3.993]
+        coordinates: [-77.00531914223507, 3.871250439269989]
       },
       properties: {
         title: 'Sixta Zambrano',
@@ -65,7 +72,7 @@ const geojson = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-77.307, 3.361]
+        coordinates: [-77.0052575949939, 3.871246274954631]
       },
       properties: {
         title: 'Sixta Zambrano',

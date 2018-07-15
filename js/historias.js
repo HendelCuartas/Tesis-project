@@ -10,12 +10,11 @@ function getVideos() {
         videos = data.items;
         addVideos(videos);
         console.log(videos);
-
     });
 }
 
 function addVideos(videosLocal) {
-    for (var a = 0; a < 8; a++) {
+    for (var a = 0; a < videos.length; a++) {
         createThumbnail(videosLocal[a], a);
     }
 }

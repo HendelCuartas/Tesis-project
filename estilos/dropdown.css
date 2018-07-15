@@ -52,3 +52,15 @@
 .dropdown:hover .dropbtn {
     background-color: rgb(121, 36, 56);
 }
+
+@media (max-width: 624px) {
+    .dropbtn {
+        background-color: #943B50;
+        color: white;
+        box-sizing: border-box;
+        font-size: 1rem;
+        border: none;
+        height: 35px;
+        width: 100px;
+    }
+}

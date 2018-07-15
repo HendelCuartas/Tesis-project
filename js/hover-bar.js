@@ -3,7 +3,7 @@ function hoverBar() {
     $("#go-home").hover(
         function () {
             console.log("entrahover");
-            $("#go-home").append(`<div class="etiqueta"> <p> Home </p> </div>`);
+            $("#go-home").append(`<div class="etiqueta"> <p> Inicio </p> </div>`);
         }, function () {
             $(".etiqueta").remove();
         });
