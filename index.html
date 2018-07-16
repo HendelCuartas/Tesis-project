@@ -14,7 +14,7 @@
 </head>
 <!--BODY-->
 
-<body onload="onLoadPageToolt(), hoverBar(), etiquetaSeguimiento()">
+<body onload="onLoadPageToolt(), hoverBar(), etiquetaSeguimiento(), closeWaitScreen()">
 
     <!--VIDEO FONDO-->
     <video autoplay muted loop id="myVideo">
@@ -55,7 +55,16 @@
         <!--<button class="btn_in_go_doc">Ir al documental</button>-->
         <a href="documental.html" class="btn_in_go_doc">Empieza tu recorrido</a>
     </div>
+    <div class="wait-screen">
+        <div class="loader">
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+            <h1>Estamos cargando el contenido</h1>
+        </div>
 
+    </div>
 </body>
 
 <!--Termina Body-->
@@ -87,6 +96,10 @@
 
     function setActiveClass(nameclass) {
         document.getElementById(nameclass).classList.add('active');
+    }
+
+    function closeWaitScreen() {
+        $('.wait-screen').css('display', 'none');
     }
 </script>
 

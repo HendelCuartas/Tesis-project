@@ -28,13 +28,13 @@ iframe {
 border: 0px solid #000000;
 }
 
-h1{
+.alinearcontac h1{
     font-size: 2.5em;
     padding-top: 0.5em;
     color: rgb(133, 49, 68);
 }
 
-h3{
+.alinearcontac h3{
     padding-bottom: 2em;
 }
 
@@ -46,12 +46,12 @@ h3{
     #fotocontacto{
         display: none;
     }
-    h1{
+    .alinearcontac h1{
         font-size: 1.5em;
         padding-top: 0.5em;
         color: rgb(133, 49, 68);
     }
-    h3{
+    .alinearcontac h3{
         padding-bottom: 2em;
         font-size: 1em;
     }

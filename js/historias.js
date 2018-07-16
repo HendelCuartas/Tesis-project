@@ -1,4 +1,4 @@
-const maxResults = 20;
+const maxResults = 19;
 const channelID = "UCJM35zebmBhaYJ2w5nDzJhA";
 const API_key = "AIzaSyBiMYerXm0u9f5doBdI-YljrSfsqIdyiwI";
 const url = `https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=${channelID}&maxResults=${maxResults}&key=${API_key}`;
@@ -11,6 +11,10 @@ function getVideos() {
         addVideos(videos);
         console.log(videos);
     });
+}
+
+function closeWaitScreen() {
+    $('.wait-screen').css('display', 'none');
 }
 
 function addVideos(videosLocal) {
@@ -51,6 +55,7 @@ elementsArray.forEach(function (elem) {
 
 function onLoadPage() {
     getVideos();
+    closeWaitScreen();
 }
 
 function busqueda() {
