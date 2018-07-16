@@ -25,7 +25,7 @@ function addVideos(videosLocal) {
 
 function createThumbnail(video, id) {
     $(".video-section").append(
-        `<div class="card" >
+        `<div class="card animated pulse" >
           <img class="video-pop-up" src=${video.snippet.thumbnails.medium.url} onclick="selectVideo(${id})" />
           <h4>${video.snippet.title}</h4>
         </div>`);
