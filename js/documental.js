@@ -31,7 +31,7 @@ const geojson = {
       coordinates: [-77.00534405725284, 3.8710632529502957]
     },
     properties: {
-      title: 'Huellas de vida documental interactivo Asoparupa - Video 1',
+      title: 'Clelia Quiñones',
       id: 'MqZ6l46tV3g',
       image: 'https://i.ytimg.com/vi/MqZ6l46tV3g/mqdefault.jpg'
     }
@@ -43,7 +43,7 @@ const geojson = {
       coordinates: [-77.00537715811697, 3.8711164516110927]
     },
     properties: {
-      title: 'video-dos',
+      title: 'Sixta Zambrano',
       id: 'fbNglufVzRQ',
       image: 'https://i.ytimg.com/vi/fbNglufVzRQ/mqdefault.jpg'
     }
@@ -55,7 +55,7 @@ const geojson = {
       coordinates: [-77.00537508331252, 3.8712022018439494]
     },
     properties: {
-      title: 'video-tres',
+      title: 'Sixta zambrano',
       id: 'Sk0P86SKUzU',
       image: 'https://i.ytimg.com/vi/Sk0P86SKUzU/mqdefault.jpg'
     }
@@ -67,7 +67,7 @@ const geojson = {
       coordinates: [-77.00531914223507, 3.871250439269989]
     },
     properties: {
-      title: 'Sixta Zambrano',
+      title: 'María Riascos',
       id: 'airtVzrKZk8',
       image: 'https://i.ytimg.com/vi/airtVzrKZk8/mqdefault.jpg'
     }
@@ -79,7 +79,7 @@ const geojson = {
       coordinates: [-77.0052575949939, 3.871246274954631]
     },
     properties: {
-      title: 'Sixta Zambrano',
+      title: 'María Riascos',
       id: 'irdFkdVOwUY',
       image: 'https://i.ytimg.com/vi/irdFkdVOwUY/mqdefault.jpg'
     }
@@ -244,7 +244,6 @@ const geojson = {
 };
 
 map.on('load', function () {
-
   getVideos();
   geojson.features.forEach(function (marker) {
     const el = document.createElement('div');
