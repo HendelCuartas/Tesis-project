@@ -1,5 +1,4 @@
 
-
 function closeWaitScreen() {
   $('.wait-screen').css('display', 'none');
 }
@@ -12,6 +11,7 @@ function playSound(soundfile) {
 
 function onLoadPage() {
   closeWaitScreen();
+  getVideos();
 }
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGVuZGVsY3VhcnRhcyIsImEiOiJjamlveDZ3YTUwdW91M3BxaGN3NHNqMWFyIn0.EnbWjk5wHR478Pgi95UjOQ';
@@ -31,8 +31,9 @@ const geojson = {
       coordinates: [-77.00534405725284, 3.8710632529502957]
     },
     properties: {
-      title: 'video-uno',
-      url: 'https://www.youtube.com/embed/MqZ6l46tV3g'
+      title: 'Huellas de vida documental interactivo Asoparupa - Video 1',
+      id: 'MqZ6l46tV3g',
+      image: 'https://i.ytimg.com/vi/MqZ6l46tV3g/mqdefault.jpg'
     }
   },
   {
@@ -43,7 +44,8 @@ const geojson = {
     },
     properties: {
       title: 'video-dos',
-      url: 'https://www.youtube.com/embed/fbNglufVzRQ'
+      id: 'fbNglufVzRQ',
+      image: 'https://i.ytimg.com/vi/fbNglufVzRQ/mqdefault.jpg'
     }
   },
   {
@@ -54,7 +56,8 @@ const geojson = {
     },
     properties: {
       title: 'video-tres',
-      url: 'https://www.youtube.com/embed/Sk0P86SKUzU'
+      id: 'Sk0P86SKUzU',
+      image: 'https://i.ytimg.com/vi/Sk0P86SKUzU/mqdefault.jpg'
     }
   },
   {
@@ -65,7 +68,8 @@ const geojson = {
     },
     properties: {
       title: 'Sixta Zambrano',
-      url: 'https://www.youtube.com/embed/airtVzrKZk8'
+      id: 'airtVzrKZk8',
+      image: 'https://i.ytimg.com/vi/airtVzrKZk8/mqdefault.jpg'
     }
   },
   {
@@ -76,7 +80,8 @@ const geojson = {
     },
     properties: {
       title: 'Sixta Zambrano',
-      url: 'https://www.youtube.com/embed/irdFkdVOwUY'
+      id: 'irdFkdVOwUY',
+      image: 'https://i.ytimg.com/vi/irdFkdVOwUY/mqdefault.jpg'
     }
   },
   {
@@ -87,7 +92,8 @@ const geojson = {
     },
     properties: {
       title: 'María Ortega',
-      url: 'https://www.youtube.com/embed/KFHmzaTCnbk'
+      id: 'KFHmzaTCnbk',
+      image: 'https://i.ytimg.com/vi/KFHmzaTCnbk/mqdefault.jpg'
     }
   },
   {
@@ -98,7 +104,8 @@ const geojson = {
     },
     properties: {
       title: 'Silvia Ortega',
-      url: 'https://www.youtube.com/embed/FbTg3YJgRg8'
+      id: 'FbTg3YJgRg8',
+      image: 'https://i.ytimg.com/vi/FbTg3YJgRg8/mqdefault.jpg'
     }
   },
   {
@@ -109,7 +116,8 @@ const geojson = {
     },
     properties: {
       title: 'Silvia y María Ortega, Stella Cuero',
-      url: 'https://www.youtube.com/embed/0Pd1eDaRtnU'
+      id: '0Pd1eDaRtnU',
+      image: 'https://i.ytimg.com/vi/0Pd1eDaRtnU/mqdefault.jpg'
     }
   },
   {
@@ -120,7 +128,8 @@ const geojson = {
     },
     properties: {
       title: 'Parturienta',
-      url: 'https://www.youtube.com/embed/h8Ds3zBb1s8'
+      id: 'h8Ds3zBb1s8',
+      image: 'https://i.ytimg.com/vi/h8Ds3zBb1s8/mqdefault.jpg'
     }
   },
   {
@@ -131,7 +140,8 @@ const geojson = {
     },
     properties: {
       title: 'María Peña',
-      url: 'https://www.youtube.com/embed/OaW-pVNqz0E'
+      id: 'OaW-pVNqz0E',
+      image: 'https://i.ytimg.com/vi/OaW-pVNqz0E/mqdefault.jpg'
     }
   },
   {
@@ -142,7 +152,8 @@ const geojson = {
     },
     properties: {
       title: 'María Peña',
-      url: 'https://www.youtube.com/embed/F5eznXyjyj8'
+      id: 'F5eznXyjyj8',
+      image: 'https://i.ytimg.com/vi/F5eznXyjyj8/mqdefault.jpg'
     }
   },
   {
@@ -153,7 +164,8 @@ const geojson = {
     },
     properties: {
       title: 'María Peña',
-      url: 'https://www.youtube.com/embed/GdndTwAS060'
+      id: 'GdndTwAS060',
+      image: 'https://i.ytimg.com/vi/GdndTwAS060/mqdefault.jpg'
     }
   },
   {
@@ -164,7 +176,8 @@ const geojson = {
     },
     properties: {
       title: 'María Peña',
-      url: 'https://www.youtube.com/embed/-SbejEa6KWQ'
+      id: '-SbejEa6KWQ',
+      image: 'https://i.ytimg.com/vi/-SbejEa6KWQ/mqdefault.jpg'
     }
   },
   {
@@ -175,7 +188,8 @@ const geojson = {
     },
     properties: {
       title: 'María Peña',
-      url: 'https://www.youtube.com/embed/HeXy3VL64kY'
+      id: 'HeXy3VL64kY',
+      image: 'https://i.ytimg.com/vi/HeXy3VL64kY/mqdefault.jpg'
     }
   },
   {
@@ -186,7 +200,8 @@ const geojson = {
     },
     properties: {
       title: 'Partera Graciela',
-      url: 'https://www.youtube.com/embed/n-hObyQO544'
+      id: 'n-hObyQO544',
+      image: 'https://i.ytimg.com/vi/n-hObyQO544/mqdefault.jpg'
     }
   },
   {
@@ -197,7 +212,8 @@ const geojson = {
     },
     properties: {
       title: 'María Peña',
-      url: 'https://www.youtube.com/embed/hY02chp85Rs'
+      id: 'hY02chp85Rs',
+      image: 'https://i.ytimg.com/vi/hY02chp85Rs/mqdefault.jpg'
     }
   },
   {
@@ -208,7 +224,8 @@ const geojson = {
     },
     properties: {
       title: 'Melina Hernández',
-      url: 'https://www.youtube.com/embed/qWoPKk10WbQ'
+      id: 'qWoPKk10WbQ',
+      image: 'https://i.ytimg.com/vi/qWoPKk10WbQ/mqdefault.jpg'
     }
   },
   {
@@ -219,27 +236,28 @@ const geojson = {
     },
     properties: {
       title: 'Cerafina Castillo',
-      url: 'https://www.youtube.com/embed/VLVjfKzssYs'
+      id: 'VLVjfKzssYs',
+      image: 'https://i.ytimg.com/vi/VLVjfKzssYs/mqdefault.jpg'
     }
   }
   ]
 };
-var spliteado;
-function splitString(url) {
-  spliteado = url.split('/');
-  //console.log(spliteado);
-}
 
 map.on('load', function () {
 
+  getVideos();
   geojson.features.forEach(function (marker) {
     const el = document.createElement('div');
     el.className = 'marker';
-    splitString(marker.properties.url);
     new mapboxgl.Marker(el)
       .setLngLat(marker.geometry.coordinates)
       .setPopup(new mapboxgl.Popup({ offset: 25 })
-      .setHTML(`<iframe src="${marker.properties.url}" frameborder="0" allowfullscreen></iframe>`))
+      .setHTML(`<div class="card" >
+      <img class="video-pop-up" src=${marker.properties.image} onclick="openVideo('${marker.properties.id}')" />
+      <h4>${marker.properties.title}</h4>
+    </div>`))
       .addTo(map);
   });
 })
+
+//linea del sethtml es el error  `<iframe src="${marker.properties.url}" onclick="openVideo(splitString(4)" frameborder="0" allowfullscreen></iframe>`

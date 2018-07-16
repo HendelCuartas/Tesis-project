@@ -1,4 +1,4 @@
-const maxResults = 10;
+const maxResults = 20;
 const channelID = "UCJM35zebmBhaYJ2w5nDzJhA";
 const API_key = "AIzaSyBiMYerXm0u9f5doBdI-YljrSfsqIdyiwI";
 const url = `https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=${channelID}&maxResults=${maxResults}&key=${API_key}`;
