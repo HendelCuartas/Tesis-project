@@ -9,7 +9,7 @@ function getVideos() {
     $.get(url, function (data, status) {
         videos = data.items;
         addVideos(videos);
-        console.log(videos);
+        //console.log(videos);
     });
 }
 
@@ -58,24 +58,37 @@ function onLoadPage() {
     closeWaitScreen();
 }
 
+
+
 function busqueda() {
     $('.video-section').empty();
-    var maxResults = 10;
+    var maxResults = 19;
     var channelID = "UCJM35zebmBhaYJ2w5nDzJhA";
     var API_key = "AIzaSyBiMYerXm0u9f5doBdI-YljrSfsqIdyiwI";
     var nohayresul = null;
+    var snipp = "";
+
     $.get("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" +
         channelID + "&maxResults=" + maxResults + "&key=" + API_key,
         function (data) {
             var videos = data.items;
+            
             for (var i = 0; i < videos.length; i++) {
+               
                 if (videos[i].snippet.description.toLowerCase().includes($(".searchTerm").val())) {
                     console.log("found");
                     nohayresul = false;
-                    createThumbnail(videos[i], i);
+                    $(".video-section").empty();
+                    createThumbnail(videos[i]);
+                    
                 } else if (nohayresul != false) {
                     nohayresul = true;
+                    $(".video-section").append(`<h2 style="margin:auto; color:white">No se han encontrado resultados de 
+                    ${$(".searchTerm").val()}, por favor intenta con otra palabra</h2>`);
+                    console.log("entranohayres");
+                    break;
                 }
+                //break;
             }
         });
 }
