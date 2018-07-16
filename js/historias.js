@@ -65,29 +65,63 @@ function busqueda() {
     var maxResults = 19;
     var channelID = "UCJM35zebmBhaYJ2w5nDzJhA";
     var API_key = "AIzaSyBiMYerXm0u9f5doBdI-YljrSfsqIdyiwI";
-    var nohayresul = null;
-    var snipp = "";
+    var snipp = [];
 
     $.get("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" +
         channelID + "&maxResults=" + maxResults + "&key=" + API_key,
         function (data) {
             var videos = data.items;
-            
+            $(".video-section").empty();
+            var numeroVideos = videos.length;
+
+
             for (var i = 0; i < videos.length; i++) {
-               
-                if (videos[i].snippet.description.toLowerCase().includes($(".searchTerm").val())) {
+
+                $.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videos[i].id.videoId}&key=${API_key}`,
+                    function (data) {
+                        var snip = data.items;
+                        snipp = snipp.concat(snip);
+                        //console.log(snipp);
+                        
+                        var hayAlMenosUnResultado = false;
+                        if (snipp.length == numeroVideos) {
+                            //console.log(snipp);
+                            var contador=0;
+                            for (var j = 0; j < snipp.length; j++) {
+                                
+                                if (snipp[j].snippet.description.toLowerCase().includes($(".searchTerm").val())) {
+                                    hayAlMenosUnResultado = true;
+                                    console.log("found");
+                                    createThumbnail(snipp[j]);
+                                } else {
+                                    if(j==snipp.length-1 && hayAlMenosUnResultado!=true){
+                                        if($("#no-result-title").length==0){
+                                            $(".video-section").append(`<h2 id="no-result-title" style="margin:auto; color:white">No se han encontrado resultados de 
+                                            ${$(".searchTerm").val()}, por favor intenta con otra palabra</h2>`);
+                                        }
+                                        console.log("entranohayres");
+                                        console.log("sirve");
+                                    }
+
+                                }
+
+                            }
+                        }
+                    });
+                /*if (videos[i].snippet.description.toLowerCase().includes($(".searchTerm").val())) {
                     console.log("found");
-                    nohayresul = false;
-                    $(".video-section").empty();
                     createThumbnail(videos[i]);
-                    
+                    nohayresul = false;
+
                 } else if (nohayresul != false) {
-                    nohayresul = true;
-                    $(".video-section").append(`<h2 style="margin:auto; color:white">No se han encontrado resultados de 
+                    if ($("#no-result-title").length == 0) {
+                        $(".video-section").append(`<h2 id="no-result-title" style="margin:auto; color:white">No se han encontrado resultados de 
                     ${$(".searchTerm").val()}, por favor intenta con otra palabra</h2>`);
-                    console.log("entranohayres");
-                    break;
-                }
+                        console.log("entranohayres");
+                        nohayresul = true;
+                    }
+                    //break;
+                }*/
                 //break;
             }
         });
