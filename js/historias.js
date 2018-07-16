@@ -19,14 +19,14 @@ function closeWaitScreen() {
 
 function addVideos(videosLocal) {
     for (var a = 0; a < videos.length; a++) {
-        createThumbnail(videosLocal[a], a);
+        createThumbnail(videosLocal[a]);
     }
 }
 
-function createThumbnail(video, id) {
+function createThumbnail(video) {
     $(".video-section").append(
         `<div class="card animated pulse" >
-          <img class="video-pop-up" src=${video.snippet.thumbnails.medium.url} onclick="selectVideo(${id})" />
+          <img class="video-pop-up" src=${video.snippet.thumbnails.medium.url} onclick="openVideo('${video.id.videoId}')" />
           <h4>${video.snippet.title}</h4>
         </div>`);
 }
